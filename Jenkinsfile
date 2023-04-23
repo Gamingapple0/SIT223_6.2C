@@ -12,11 +12,13 @@ pipeline{
             }
             post{
                 always{
-                    emailext attachments: '**/*.log' (
+                    emailext (
                         subject: 'Unit and Integration Tests Status',
                         to: 'madhikarmianshu@gmail.com',
                         body: 'Job: ${currentBuild.result}',
-                        attachLog: true
+                        attachLog: true,
+                        attachmentsPattern: 'path/to/your/log/file(s)',
+                        emailextrecipients: 'madhikarmianshu@gmail.com',
                     )
                 }
             }
