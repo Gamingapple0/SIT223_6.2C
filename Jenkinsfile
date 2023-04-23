@@ -19,9 +19,9 @@ pipeline {
     }
     post {
         always {
-            subject: "Integration Test", 
-            to: 'madhikarmianshu@gmail.com',
-            body: 'Build Sucessful'
+            mail to:"madhikarmianshu@gmail.com",
+            subject: "Integration Test",
+            body: "Build Sucessful"
         }
     }
 }
