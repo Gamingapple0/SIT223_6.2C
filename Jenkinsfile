@@ -36,8 +36,7 @@ pipeline{
                 always{
                     mail to: "madhikarmianshu@gmail.com",
                     subject: "Test",
-                    body: "Passed",
-                    attachLog: true
+                    body: "Passed"
                 }
             }
         }
