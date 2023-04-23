@@ -7,7 +7,7 @@ pipeline {
          }
          post {
             always {
-                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' - Build", 
+                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
                 body: "${FILE,path=\"log.txt\"}",
                 attachLog: true, to: 'madhikarmianshu@gmail.com'
             }
@@ -19,7 +19,7 @@ pipeline {
          }
          post {
             always {
-                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' - Unit and Integration Tests", 
+                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
                 body: "${FILE,path=\"log.txt\"}",
                 attachLog: true, to: 'madhikarmianshu@gmail.com'
             }
@@ -31,7 +31,7 @@ pipeline {
          }
          post {
             always {
-                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' - Code Analysis", 
+                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
                 body: "${FILE,path=\"log.txt\"}",
                 attachLog: true, to: 'madhikarmianshu@gmail.com'
             }
@@ -43,7 +43,7 @@ pipeline {
          }
          post {
             always {
-                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' - Security Scan", 
+                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
                 body: "${FILE,path=\"log.txt\"}",
                 attachLog: true, to: 'madhikarmianshu@gmail.com'
             }
@@ -55,7 +55,7 @@ pipeline {
          }
          post {
             always {
-                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' - Deploy to Staging", 
+                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
                 body: "${FILE,path=\"log.txt\"}",
                 attachLog: true, to: 'madhikarmianshu@gmail.com'
             }
@@ -67,7 +67,7 @@ pipeline {
          }
          post {
             always {
-                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' - Integration Tests on Staging", 
+                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
                 body: "${FILE,path=\"log.txt\"}",
                 attachLog: true, to: 'madhikarmianshu@gmail.com'
             }
@@ -79,7 +79,7 @@ pipeline {
          }
          post {
             always {
-                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' - Deploy to Production", 
+                emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
                 body: "${FILE,path=\"log.txt\"}",
                 attachLog: true, to: 'madhikarmianshu@gmail.com'
             }
@@ -87,4 +87,3 @@ pipeline {
       }
    }
 }
-``
