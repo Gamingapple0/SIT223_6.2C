@@ -12,9 +12,13 @@ pipeline{
             }
             post{
                 always{
-                    mail to: "madhikarmianshu@gmail.com",
-                    subject: "Unit Test Status Email",
-                    body: "Build log attached!"
+                    emailext (
+                        subject: 'Unit and Integration Tests Status',
+                        to: 'madhikarmianshu@gmail.com',
+                        body: 'Job: ${currentBuild.result}',
+                        attachLog: true,
+                        attachmentsPattern: '*.log'
+                    )
                 }
             }
         }
@@ -29,9 +33,13 @@ pipeline{
             }
             post{
                 always{
-                    mail to: "madhikarmianshu@gmail.com",
-                    subject: "Security Scan Email",
-                    body: "${currentBuild.result}: Job "
+                    emailext (
+                        subject: 'Security Scan Status',
+                        to: 'madhikarmianshu@gmail.com',
+                        body: 'Job: ${currentBuild.result}',
+                        attachLog: true,
+                        attachmentsPattern: '*.log'
+                    )
                 }
             }
         }
@@ -46,9 +54,13 @@ pipeline{
             }
             post{
                 always{
-                    mail to: "madhikarmianshu@gmail.com",
-                    subject: "Integration Test Status Email",
-                    body: "'${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
+                    emailext (
+                        subject: 'Integration Tests on Staging Status',
+                        to: 'madhikarmianshu@gmail.com',
+                        body: 'Job: ${currentBuild.result}',
+                        attachLog: true,
+                        attachmentsPattern: '*.log'
+                    )
                 }
             }
         }
