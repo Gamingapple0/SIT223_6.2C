@@ -19,7 +19,7 @@ pipeline {
     }
     post {
         always {
-            subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
+            subject: "Integration Test", 
             to: 'madhikarmianshu@gmail.com',
             body: 'Build Sucessful'
         }
