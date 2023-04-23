@@ -17,8 +17,6 @@ pipeline{
                         to: 'madhikarmianshu@gmail.com',
                         body: 'Job: ${currentBuild.result}',
                         attachLog: true,
-                        attachmentsPattern: 'path/to/your/log/file(s)',
-                        emailextrecipients: 'madhikarmianshu@gmail.com',
                     )
                 }
             }
@@ -56,7 +54,6 @@ pipeline{
                         to: 'madhikarmianshu@gmail.com',
                         body: 'Job: ${currentBuild.result}',
                         attachLog: true,
-                        attachmentsPattern: '*.log'
                     )
                 }
             }
