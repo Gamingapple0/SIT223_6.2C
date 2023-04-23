@@ -35,7 +35,7 @@ pipeline{
                     emailext (
                         subject: 'Security Scan Status',
                         to: 'madhikarmianshu@gmail.com',
-                        body: '${currentBuild.result}: Job ',
+                        body: "${currentBuild.result}: Job ",
                         attachLog: true,
                     )
                 }
@@ -55,7 +55,7 @@ pipeline{
                     emailext (
                         subject: 'Integration Tests on Staging Status',
                         to: 'madhikarmianshu@gmail.com',
-                        body: '${currentBuild.result}: Job ',
+                        body: "${currentBuild.result}: Job ",
                         attachLog: true,
                     )
                 }
