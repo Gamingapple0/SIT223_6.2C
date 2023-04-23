@@ -19,8 +19,9 @@ pipeline {
     }
     post {
         always {
-            emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
-            to: 'madhikarmianshu@gmail.com'
+            subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
+            to: 'madhikarmianshu@gmail.com',
+            body: 'Build Sucessful'
         }
     }
 }
