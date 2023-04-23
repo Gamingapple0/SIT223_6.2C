@@ -9,7 +9,7 @@ pipeline {
     always {
         emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
         body: "${FILE,path=\"log.txt\"}",
-        attachLog: true, to: 'email@example.com'
+        attachLog: true, to: 'madhikarmianshu@gmail.com'
     }
 }
 
@@ -23,7 +23,7 @@ pipeline {
     always {
         emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
         body: "${FILE,path=\"log.txt\"}",
-        attachLog: true, to: 'email@example.com'
+        attachLog: true, to: 'madhikarmianshu@gmail.com'
     }
 }
 
@@ -32,11 +32,11 @@ pipeline {
             // Use a code analysis tool like SonarQube to analyze the code
          }
       }
-            post {
+         post {
     always {
         emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
         body: "${FILE,path=\"log.txt\"}",
-        attachLog: true, to: 'email@example.com'
+        attachLog: true, to: 'madhikarmianshu@gmail.com'
     }
 }
 
@@ -45,11 +45,11 @@ pipeline {
             // Use a security scan tool like OWASP ZAP to scan the code
          }
       }
-               post {
+         post {
     always {
         emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
         body: "${FILE,path=\"log.txt\"}",
-        attachLog: true, to: 'email@example.com'
+        attachLog: true, to: 'madhikarmianshu@gmail.com'
     }
 }
 
@@ -58,11 +58,11 @@ pipeline {
             // Use a deployment tool like AWS CodeDeploy to deploy the application to a staging server
          }
       }
-                  post {
+         post {
     always {
         emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
         body: "${FILE,path=\"log.txt\"}",
-        attachLog: true, to: 'email@example.com'
+        attachLog: true, to: 'madhikarmianshu@gmail.com'
     }
 }
 
@@ -71,11 +71,11 @@ pipeline {
             // Use test automation tools like JUnit and Selenium to run integration tests on the staging environment
          }
       }
-                     post {
+         post {
     always {
         emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
         body: "${FILE,path=\"log.txt\"}",
-        attachLog: true, to: 'email@example.com'
+        attachLog: true, to: 'madhikarmianshu@gmail.com'
     }
 }
 
@@ -84,11 +84,11 @@ pipeline {
             // Use a deployment tool like AWS CodeDeploy to deploy the application to a production server
          }
       }
-                        post {
+         post {
     always {
         emailext subject: "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", 
         body: "${FILE,path=\"log.txt\"}",
-        attachLog: true, to: 'email@example.com'
+        attachLog: true, to: 'madhikarmianshu@gmail.com'
     }
 }
 
