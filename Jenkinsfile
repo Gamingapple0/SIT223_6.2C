@@ -16,7 +16,6 @@ pipeline{
                         subject: 'Unit and Integration Tests Status',
                         to: 'madhikarmianshu@gmail.com',
                         body: 'Job: ${currentBuild.result}',
-                        attachLog: true,
                     )
                 }
             }
