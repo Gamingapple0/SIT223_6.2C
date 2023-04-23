@@ -15,7 +15,8 @@ pipeline{
                     emailext (
                         subject: 'Unit and Integration Tests Status',
                         to: 'madhikarmianshu@gmail.com',
-                        body: 'Job: ${currentBuild.result}',
+                        body: "${currentBuild.result}: Job ",
+                        attachLog: true
                     )
                 }
             }
@@ -31,9 +32,12 @@ pipeline{
             }
             post{
                 always{
-                    mail to: "madhikarmianshu@gmail.com",
-                    subject: "Test",
-                    body: "Passed"
+                    emailext (
+                        subject: 'Security Scan Status',
+                        to: 'madhikarmianshu@gmail.com',
+                        body: '${currentBuild.result}: Job ',
+                        attachLog: true,
+                    )
                 }
             }
         }
@@ -51,7 +55,7 @@ pipeline{
                     emailext (
                         subject: 'Integration Tests on Staging Status',
                         to: 'madhikarmianshu@gmail.com',
-                        body: 'Job: ${currentBuild.result}',
+                        body: '${currentBuild.result}: Job ',
                         attachLog: true,
                     )
                 }
