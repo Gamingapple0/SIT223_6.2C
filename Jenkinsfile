@@ -33,13 +33,9 @@ pipeline{
             }
             post{
                 always{
-                    emailext (
-                        subject: 'Security Scan Status',
-                        to: 'madhikarmianshu@gmail.com',
-                        body: 'Job: ${currentBuild.result}',
-                        attachLog: true,
-                        attachmentsPattern: '*.log'
-                    )
+                    mail to: "madhikarmianshu@gmail.com",
+                    subject: "Test",
+                    body: "Passed"
                 }
             }
         }
